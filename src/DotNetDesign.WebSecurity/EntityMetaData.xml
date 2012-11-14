@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution solutionVersion="1.0.0.28" PIVersion="1.0.0.0" href="file:///D:\builds\caascommon_helium_systest\products\caascommon\src\common.substrate\tools\EntitiesFormTemplate.xsn" name="urn:schemas-microsoft-com:office:infopath:EntitiesFormTemplate:" language="en-us" productVersion="15.0.0" ?>
+<?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.3"?>
+<Entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2011-09-23T16:26:05" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+  <Entity name="User" idType="Guid" isOwnable="false" ownerType="">
+    <Property name="FirstName" displayName="First Name" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="LastName" displayName="Last Name" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="EmailAddress" displayName="E-mail Address" type="string" required="true">
+      <Attribute includeOnEntityData="false">RegularExpression(Constants.RegExs.Email)</Attribute>
+    </Property>
+    <Property name="DisplayName" displayName="Display Name" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="Permissions" displayName="Permissions" type="uint?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="RoleIds" displayName="Role IDs" type="HashSet&lt;Guid&gt;" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="OAuthMembershipIds" displayName="OAuth Membership IDs" type="HashSet&lt;Guid&gt;" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="SignInCount" displayName="Number of sign-ins" type="int" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="CurrentSignInAt" displayName="Date/Time of current sign-in" type="DateTime?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="LastSignInAt" displayName="Date/Time of last sign-in" type="DateTime?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="CurrentSignInIp" displayName="Current sign-in IP address" type="string" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="LastSignInIp" displayName="Last sign-in IP address" type="string" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ConfirmationToken" displayName="Confirmation Token" type="Guid" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ConfirmedAt" displayName="Date/Time Confirmed" type="DateTime?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ConfirmationSentAt" displayName="Date/Time Confirmation was sent" type="DateTime?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="IsSuperAdmin" displayName="Is Super Admin?" type="bool" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="IsApproved" displayName="Is Approved?" type="bool" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ApprovedById" displayName="Approved by" type="Guid" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ApprovedAt" displayName="Date/Time Approved" type="DateTime?" required="false">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+  </Entity>
+  <Entity name="Role" idType="Guid" isOwnable="false" ownerType="">
+    <Property name="Name" displayName="Name" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="Permissions" displayName="Permissions" type="uint" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+  </Entity>
+  <Entity name="OAuthMembership" idType="Guid" isOwnable="false" ownerType="">
+    <Property name="ProviderName" displayName="Provider Name" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="ProviderUserId" displayName="Provider User ID" type="string" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+    <Property name="UserId" displayName="User ID" type="Guid" required="true">
+      <Attribute includeOnEntityData="false"></Attribute>
+    </Property>
+  </Entity>
+</Entities>
