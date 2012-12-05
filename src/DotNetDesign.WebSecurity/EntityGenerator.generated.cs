@@ -17,7 +17,7 @@ namespace DotNetDesign.WebSecurity
             Assembly = LogManager.GetLogger("DotNetDesign.WebSecurity");
         }
 
-        internal static ILog Assembly;
+        internal static readonly ILog Assembly;
     }
 
 	#region Entity Data Interfaces
